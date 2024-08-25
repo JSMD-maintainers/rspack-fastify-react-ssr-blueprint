@@ -6,7 +6,7 @@ import { RootComponentProps } from "../global";
 function App(props: RootComponentProps["rootComponentProps"]): JSX.Element {
   return (
     <header className={styles.header}>
-      <h3>Welcome to the JSMDG's {props.hello} Setup!</h3>
+      <h3>Welcome to the JSMDG's Frontend {props.hello} Setup!</h3>
       <p>
         Kickstart your next project with our powerful and scalable foundation,
         designed to help you build modern and fast applications effortlessly.
