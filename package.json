@@ -1,5 +1,5 @@
 {
-  "name": "rspack-can-not-read-property-of-undefined",
+  "name": "rspack + fastify + react + ssr",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
@@ -7,13 +7,13 @@
     "rspack:build:client": "webpack --config=webpack.config.client.js",
     "rspack:build:server": "webpack --config=webpack.config.server.js",
     "build": "npm run rspack:build:client && npm run rspack:build:server",
-    "dev:server": "tsx scripts/devServer.js"
+    "dev:server": "tsx scripts/devServer.js",
+    "tsc": "tsc"
   },
-  "author": "",
+  "author": "JSMDG",
   "license": "ISC",
   "dependencies": {
     "@fastify/middie": "^8.3.1",
-    "@swc/helpers": "^0.5.12",
     "fastify": "^4.28.1",
     "react": "18.2",
     "react-dev-utils": "^12.0.1",
