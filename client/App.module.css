@@ -17,6 +17,28 @@ code > strong {
     color: #f8ae00;
 }
 
+.headline {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.headline::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background-color: #f8ae00;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 .header {
     margin: 0 auto;
     text-align: center;
@@ -28,7 +50,7 @@ code > strong {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    max-width: 1200px;
+    max-width: 700px;
 }
 
 .wrapper {
