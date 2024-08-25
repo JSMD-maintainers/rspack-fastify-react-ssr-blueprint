@@ -1,0 +1,22 @@
+{
+  "include": ["client/**/*", "server/**/*", "scripts/**/*", "global.d.ts"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "target": "es2022",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "incremental": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react"
+  }
+}
