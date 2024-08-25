@@ -38,7 +38,7 @@ async function createServer(): Promise<void> {
       const clientScriptPath = join(clientOutputDir, "index.js");
       const { Fragment } = requireDynamically(clientScriptPath);
 
-      const data = { rootComponentProps: { hello: "world" } };
+      const data = { rootComponentProps: { hello: "Blueprint" } };
       const fragment = createElement(Fragment, data);
 
       return reply

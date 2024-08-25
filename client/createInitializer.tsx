@@ -1,29 +1,24 @@
-import React, { ComponentType, JSX } from "react";
+import React, { ComponentType } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { fragmentContext } from "./context";
+import { RootComponentProps } from "../global";
 
-export function createInitializer(RootComponent: ComponentType): {
+export function createInitializer(
+  RootComponent: ComponentType<RootComponentProps["rootComponentProps"]>,
+): {
   init: (rootElement: Element) => Promise<void>;
-  Fragment: ({
-    rootComponentProps,
-  }: {
-    rootComponentProps: Record<string, unknown>;
-  }) => React.JSX.Element;
+  Fragment: ({ rootComponentProps }: RootComponentProps) => React.JSX.Element;
 } {
-  const Fragment = ({
-    rootComponentProps,
-  }: {
-    rootComponentProps: Record<string, unknown>;
-  }) => {
+  function Fragment({ rootComponentProps }: RootComponentProps) {
     return (
       <fragmentContext.Provider value={{ ...rootComponentProps }}>
         <RootComponent {...rootComponentProps} />
       </fragmentContext.Provider>
     );
-  };
+  }
 
   async function init(rootElement: Element): Promise<void> {
-    const { rootComponentProps } = window?.custom?.data;
+    const { rootComponentProps } = window?.custom?.data!;
 
     if (!rootElement) {
       throw new Error(
