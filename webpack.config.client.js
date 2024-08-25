@@ -1,6 +1,7 @@
 const path = require("path");
 const { moduleFileExtensions } = require("./extensions");
 const { ProgressPlugin, EnvironmentPlugin } = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 /** @type {import('webpack').Configuration} */
 const webpackClientConfig = {
@@ -18,7 +19,7 @@ const webpackClientConfig = {
   output: {
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    sourceMapFilename: "[name].js.map",
+    sourceMapFilename: "[name].[ext].map",
     library: ["hydrator", "[name]"],
     libraryTarget: "umd",
     globalObject: "(typeof self != 'undefined' ? self : this)",
@@ -71,9 +72,35 @@ const webpackClientConfig = {
         },
         type: "javascript/auto",
       },
+      {
+        test: /\.css$/u,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              defaultExport: true,
+            },
+          },
+          {
+            loader: require.resolve("css-loader"),
+            options: {
+              esModule: true,
+              modules: {
+                namedExport: true,
+              },
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
     new ProgressPlugin(),
     new EnvironmentPlugin(Object.keys(process.env)),
   ],

@@ -1,4 +1,5 @@
 import React, { JSX, useState } from "react";
+import { JSLogo } from "./JSLogo";
 
 function App(props: Record<string, unknown>): JSX.Element {
   const [number, setNumber] = useState(7);
@@ -6,6 +7,7 @@ function App(props: Record<string, unknown>): JSX.Element {
   return (
     <div>
       <header>
+        <JSLogo />
         <p>
           Hey ho <code>welcome</code> to JSMDs blueprint setup. These are my
           passed props {JSON.stringify(props)}
