@@ -1,6 +1,6 @@
-# JSMD Rspack + Fastify + React SSR Blueprint Project
+# JSMDG Rspack + Fastify + React SSR Blueprint Project
 
-Welcome to the JSMD Rspack + Fastify + React SSR Blueprint Project! This repository serves as a comprehensive guide and boilerplate for setting up a powerful and efficient server-side rendering (SSR) application using Rspack, Fastify, and React. Built with scalability and performance in mind, this blueprint is designed to be a starting point for your next high-performance, SSR-powered React application.
+Welcome to the JSMDG's Rspack + Fastify + React SSR Blueprint Project! This repository serves as a comprehensive guide and boilerplate for setting up a powerful and efficient server-side rendering (SSR) application using Rspack, Fastify, and React. Built with scalability and performance in mind, this blueprint is designed to be a starting point for your next high-performance, SSR-powered React application.
 
 ## Overview
 
@@ -28,7 +28,7 @@ Server-side rendering (SSR) in React can significantly improve the performance a
 Before you begin, ensure you have the following installed on your machine:
 
 - **Node.js** (>= 20.x)
-- **npm** (>= 20.x)
+- **npm** (>= 10.x)
 
 ### Installation
 
@@ -109,7 +109,7 @@ Special thanks to the open-source community for their continuous efforts in adva
 
 Happy coding! If you find this blueprint helpful, give it a star ⭐ on GitHub, and share it with your network.
 
-For more projects and updates from JSMD, follow us on [GitHub](https://github.com/JSMD).
+For more projects and updates from JSMDG, follow us on [GitHub](https://github.com/JSMDG).
 
 ---
 
