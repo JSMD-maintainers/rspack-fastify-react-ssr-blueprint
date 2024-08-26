@@ -1,6 +1,6 @@
-import { webpack } from "webpack";
-import clientConfig from "../webpack.config.client";
-import serverConfig from "../webpack.config.server";
+import { rspack } from "@rspack/core";
+import clientConfig from "../rspack.config.client";
+import serverConfig from "../rspack.config.server";
 import { ChildProcess } from "child_process";
 import childProcess from "node:child_process";
 import formatWebpackMessages from "react-dev-utils/formatWebpackMessages";
@@ -18,7 +18,7 @@ const devServer = () => {
     });
   };
 
-  const compiler = webpack([clientConfig, serverConfig]);
+  const compiler = rspack([clientConfig, serverConfig]);
 
   compiler.watch({}, (error, stats) => {
     let messages;
@@ -54,7 +54,7 @@ const devServer = () => {
         `To ignore, add // eslint-disable-next-line to the line before.\n`,
       );
     } else {
-      console.info(`Compiled successfully with webpack\n`);
+      console.info(`Compiled successfully with rspack\n`);
     }
 
     if (serverInstance) {

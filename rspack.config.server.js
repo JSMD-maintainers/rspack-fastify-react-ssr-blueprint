@@ -1,11 +1,11 @@
 const path = require("path");
 const { moduleFileExtensions } = require("./extensions");
-const { ProgressPlugin, EnvironmentPlugin } = require("webpack");
+const { ProgressPlugin, EnvironmentPlugin } = require("@rspack/core");
 const nodeExternals = require("webpack-node-externals");
 
-/** @type {import('webpack').Configuration} */
+/** @type {import('@rspack/core').Configuration} */
 const webpackServerConfig = {
-  mode: "development",
+  mode: process.env.NODE_ENV ?? "development",
   bail: false,
   stats: "normal",
   target: "node",
@@ -26,11 +26,16 @@ const webpackServerConfig = {
     extensions: moduleFileExtensions.map((extension) => `.${extension}`),
   },
   module: {
+    parser: {
+      javascript: {
+        importExportsPresence: "error",
+      },
+    },
     rules: [
       {
         test: /\.(js|ts)$/u,
         use: {
-          loader: "swc-loader", // Use swc-loader for Webpack
+          loader: "builtin:swc-loader",
           options: {
             sourceMap: true,
             jsc: {

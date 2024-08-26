@@ -1,11 +1,10 @@
 const path = require("path");
 const { moduleFileExtensions } = require("./extensions");
-const { ProgressPlugin, EnvironmentPlugin } = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { ProgressPlugin, EnvironmentPlugin, rspack } = require("@rspack/core");
 
-/** @type {import('webpack').Configuration} */
+/** @type {import('@rspack/core').Configuration} */
 const webpackClientConfig = {
-  mode: "development",
+  mode: process.env.NODE_ENV ?? "development",
   bail: false,
   stats: "normal",
   devtool: "source-map",
@@ -45,11 +44,16 @@ const webpackClientConfig = {
     },
   },
   module: {
+    parser: {
+      javascript: {
+        importExportsPresence: "error",
+      },
+    },
     rules: [
       {
         test: /\.(ts|tsx)$/u,
         use: {
-          loader: "swc-loader",
+          loader: "builtin:swc-loader",
           options: {
             sourceMap: true,
             jsc: {
@@ -76,7 +80,7 @@ const webpackClientConfig = {
         test: /\.css$/u,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: rspack.CssExtractRspackPlugin.loader,
             options: {
               defaultExport: true,
             },
@@ -97,7 +101,7 @@ const webpackClientConfig = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
+    new rspack.CssExtractRspackPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
