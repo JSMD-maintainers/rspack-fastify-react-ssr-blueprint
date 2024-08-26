@@ -1,25 +1,22 @@
-# JSMDG Rspack + Fastify + React SSR Blueprint Project
+# Rspack + Fastify + React SSR Blueprint Project
 
-Welcome to the JSMDG's Rspack + Fastify + React SSR Blueprint Project! This repository serves as a comprehensive guide and boilerplate for setting up a powerful and efficient server-side rendering (SSR) application using Rspack, Fastify, and React. Built with scalability and performance in mind, this blueprint is designed to be a starting point for your next high-performance, SSR-powered React application.
+Welcome to the JSMDG's Rspack + Fastify + React SSR Blueprint Project! This repository serves as a lightweight boilerplate for setting up a powerful and efficient server-side rendering (SSR) application using Rspack, Fastify, and React. Built with performance in mind, this blueprint is designed to be a starting point for your next web app.
 
 ## Overview
 
 ### Why This Project?
-Server-side rendering (SSR) in React can significantly improve the performance and SEO of your web applications. While there are many SSR setups available, this blueprint leverages cutting-edge technologies to ensure that your project is not only fast but also highly maintainable and scalable.
+Server-side rendering (SSR) can significantly improve the performance and SEO score of your web applications. While there are many SSR setups available, this blueprint leverages cutting-edge technologies to ensure that your project is not only fast but also highly maintainable and scalable.
 
 ### Key Technologies
-- **Rspack**: A high-performance JavaScript bundler, optimized for both build speed and runtime performance. Rspack is a modern alternative to Webpack, providing similar capabilities with significant performance gains.
-- **Fastify**: A fast and low-overhead web framework for Node.js. Fastify is known for its performance and extensibility, making it an ideal choice for high-performance applications.
-- **React**: A popular JavaScript library for building user interfaces. This blueprint uses React for both client-side and server-side rendering, ensuring a seamless user experience.
-- **Server-Side Rendering (SSR)**: With SSR, your React components are rendered on the server, improving load times and making your application more SEO-friendly.
+- **[Rspack](https://rspack.dev/)**: A high-performance JavaScript bundler, optimized for both build speed and runtime performance. Rspack is a modern alternative to Webpack, providing similar capabilities with significant performance gains.
+- **[Fastify](https://fastify.dev/)**: A fast and low-overhead web framework for Node.js. Fastify is known for its performance and extensibility, making it an ideal choice for high-performance applications.
+- **[React](https://react.dev/)**: A popular JavaScript library for building user interfaces. This blueprint uses React for both client-side and server-side rendering, ensuring a seamless user experience.
 
 ## Features
 
 - **Fast and Individual Bundling**: Leverage the power of Rspack for blazing-fast build times for client and server.
 - **High-Performance HTTP Server**: Fastify ensures your application is capable of handling high traffic with low latency.
 - **Full SSR Support**: Pre-render your React components on the server to deliver a fully interactive experience as soon as the page loads.
-- **Modular and Extensible**: Built with scalability in mind, this blueprint can be easily extended or modified to suit your specific needs.
-- **Production-Ready Setup**: Includes environment-based configuration, optimized build processes, and best practices for deploying SSR applications in production.
 
 ## Getting Started
 
@@ -35,7 +32,7 @@ Before you begin, ensure you have the following installed on your machine:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/JSMD/rspack-fastify-react-ssr-blueprint.git
+git clone https://github.com/JSMDG/rspack-fastify-react-ssr-blueprint.git
 cd rspack-fastify-react-ssr-blueprint
 npm install
 ```

@@ -1,7 +1,7 @@
 {
   "name": "rspack + fastify + react + ssr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lightweight blueprint for fast SSR web apps",
   "main": "build/index.js",
   "scripts": {
     "rspack:build:client": "webpack --config=webpack.config.client.js",
