@@ -10,7 +10,7 @@
     "dev:server": "tsx scripts/devServer.js",
     "tsc": "tsc"
   },
-  "author": "JSMDG",
+  "author": "JSMD-maintainers",
   "license": "ISC",
   "dependencies": {
     "@fastify/middie": "^8.3.1",

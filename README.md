@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed on your machine:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/JSMDG/rspack-fastify-react-ssr-blueprint.git
+git clone https://github.com/JSMD-maintainers/rspack-fastify-react-ssr-blueprint.git
 cd rspack-fastify-react-ssr-blueprint
 npm install
 ```
@@ -106,7 +106,7 @@ Special thanks to the open-source community for their continuous efforts in adva
 
 Happy coding! If you find this blueprint helpful, give it a star ⭐ on GitHub, and share it with your network.
 
-For more projects and updates from JSMDG, follow us on [GitHub](https://github.com/JSMDG).
+For more projects and updates from JSMDG, follow us on [GitHub](https://github.com/JSMD-maintainers).
 
 ---
 

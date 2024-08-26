@@ -24,7 +24,10 @@ function App(props: RootComponentProps["rootComponentProps"]): JSX.Element {
       <LogoContainer />
       <p>
         Go and check out other open-source projects{" "}
-        <a className={styles.appLink} href="https://github.com/jsmdg">
+        <a
+          className={styles.appLink}
+          href="https://github.com/JSMD-maintainers"
+        >
           on Github
         </a>{" "}
         👾
