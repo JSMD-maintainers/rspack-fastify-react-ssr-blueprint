@@ -7,7 +7,7 @@ function App(props: RootComponentProps["rootComponentProps"]): JSX.Element {
   return (
     <header className={styles.header}>
       <h3 className={styles.headline}>
-        Welcome to the JSMDG's Frontend {props.hello} Setup
+        Welcome to JSMDG's Frontend {props.hello} Setup
       </h3>
       <p>
         Kickstart your next project inspired with our powerful foundation,
