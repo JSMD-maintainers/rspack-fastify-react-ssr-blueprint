@@ -74,7 +74,7 @@ To build the project:
 npm run build
 ```
 
-This will create a build in the `build` & `dist` directory.
+This will create the output in the `build` & `dist` directory.
 
 ## How It Works
 
@@ -110,5 +110,4 @@ For more projects and updates from JSMDG, follow us on [GitHub](https://github.c
 
 ---
 
-**Jochen Schweizer Mydays Group**  
-Empowering developers to build innovative and high-performance web applications.
+**Jochen Schweizer Mydays Group**
